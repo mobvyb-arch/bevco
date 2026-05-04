@@ -3,11 +3,265 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Bevco | Premium Beverage Solutions & Equipment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top transition-all" id="mainNav">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="height: 40px;">
+            <path d="M20 20L80 20M20 50L80 50M20 80L80 80" stroke="white" stroke-width="8" id="logoPath1" />
+            <path d="M50 20L50 80" stroke="white" stroke-width="8" id="logoPath2" />
+            <circle cx="50" cy="50" r="15" fill="white" id="logoCircle" />
+          </svg>
+          <span class="logo-text text-white">BEVCO</span>
+        </a>
+        <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto text-uppercase tracking-widest small fw-bold">
+            <li class="nav-item"><a class="nav-link px-3" href="#solutions">Solutions</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#catalog">Catalog</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#clients">Clients</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-cart rounded-circle p-0 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-center text-white position-relative overflow-hidden">
+      <div id="particles" class="position-absolute top-0 start-0 w-100 h-100 pointer-events-none"></div>
+      <div class="container position-relative z-1">
+        <span class="badge rounded-pill mb-4 border border-gold-opacity text-bev-gold text-uppercase tracking-widest px-3 py-2">
+          Precision Engineering for Every Pour
+        </span>
+        <h1 class="display-1 fw-serif mb-4">Liquid Excellence. <br> <span class="text-bev-gold fst-italic">Engineered.</span></h1>
+        <p class="lead mx-auto text-white-50 mb-5" style="max-width: 700px;">
+          Bevco pioneers industrial beverage solutions that unify technical precision with artisanal quality. Scaling the world's finest drinks, one drop at a time.
+        </p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="#solutions" class="btn btn-luxury btn-luxury-gold">Explore Solutions</a>
+          <a href="#catalog" class="btn btn-luxury btn-luxury-outline">View Catalog</a>
+        </div>
+      </div>
+      <div class="vertical-scroll-msg position-absolute start-0 bottom-0 ms-5 mb-5 d-none d-lg-block">
+        <div class="line mb-3"></div>
+        <span class="text-uppercase tracking-widest text-white text-opacity-25 fw-bold" style="font-size: 10px; writing-mode: vertical-rl; transform: rotate(180deg);">EST. 1984</span>
+      </div>
+    </header>
+
+    <!-- Social Marquee -->
+    <section class="marquee py-5 bg-white border-top border-bottom">
+      <div class="marquee-content d-flex">
+        <!-- Duplicate for infinite scroll -->
+        <div class="marquee-item d-flex align-items-center gap-5 px-5">
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">BREW-HOUSE</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">VINEYARD CO</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">PUREFLOW</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">AQUA-CORE</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">NECTAR LABS</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">ZENITH DISTILLING</span>
+        </div>
+        <div class="marquee-item d-flex align-items-center gap-5 px-5">
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">BREW-HOUSE</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">VINEYARD CO</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">PUREFLOW</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">AQUA-CORE</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">NECTAR LABS</span>
+          <span class="h2 mb-0 text-bev-navy text-opacity-25 fw-serif fw-bold">ZENITH DISTILLING</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="solutions" class="py-10 bg-white">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <span class="text-bev-gold text-uppercase tracking-widest small fw-bold">Our Advantage</span>
+            <h2 class="display-5 fw-serif text-bev-navy mt-3">Scaling Tomorrow's <br> <span class="fst-italic">Beverage Icons.</span></h2>
+            <p class="mt-4 text-muted lh-lg" style="max-width: 400px;">
+              We don't just build machines; we engineer growth. Our solutions are designed to adapt as your brand grows.
+            </p>
+            <div class="mt-5 p-4 border rounded-4 bg-bev-paper bg-opacity-25 shadow-sm">
+              <div class="h1 fw-serif text-bev-gold mb-0">99.9%</div>
+              <div class="small text-uppercase tracking-widest mt-1 text-muted fw-bold">Standard Uptime Guarantee</div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="luxury-card p-5 h-100">
+                  <div class="icon-wrap mb-4 d-flex align-items-center justify-content-center bg-bev-paper rounded-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </div>
+                  <h3 class="h4 fw-serif text-bev-navy">Precision Craft</h3>
+                  <p class="small text-muted mb-0">Achieve industrial-scale efficiency without compromising flavor profiles.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="luxury-card p-5 h-100">
+                  <div class="icon-wrap mb-4 d-flex align-items-center justify-content-center bg-bev-paper rounded-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  </div>
+                  <h3 class="h4 fw-serif text-bev-navy">Global Integration</h3>
+                  <p class="small text-muted mb-0">Seamless connectivity across your entire production line with remote monitoring.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-bev-navy py-5">
+      <div class="container py-4 text-center">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3">
+            <div class="display-5 fw-serif text-bev-gold mb-1 counter" data-target="40">0</div>
+            <div class="small text-uppercase tracking-widest text-white text-opacity-50 fw-bold">Years Experience</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="display-5 fw-serif text-bev-gold mb-1 counter" data-target="1200">0</div>
+            <div class="small text-uppercase tracking-widest text-white text-opacity-50 fw-bold">Global Clients</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="display-5 fw-serif text-bev-gold mb-1 counter" data-target="500">0</div>
+            <div class="small text-uppercase tracking-widest text-white text-opacity-50 fw-bold">Annual Liters Flow</div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="display-5 fw-serif text-bev-gold mb-1 counter" data-target="85">0</div>
+            <div class="small text-uppercase tracking-widest text-white text-opacity-50 fw-bold">Service Points</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="py-10 bg-white">
+      <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <h2 class="display-6 fw-serif text-bev-navy">Industrial Catalog</h2>
+          <div class="d-flex gap-2 filter-group">
+            <button class="btn btn-filter active" data-filter="all">All</button>
+            <button class="btn btn-filter" data-filter="production">Production</button>
+            <button class="btn btn-filter" data-filter="processing">Processing</button>
+          </div>
+        </div>
+        <div class="row g-4" id="catalogGrid">
+          <!-- Item 1 -->
+          <div class="col-lg-3 col-sm-6 catalog-item" data-category="production">
+            <div class="catalog-card position-relative overflow-hidden rounded-5 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format" class="w-100 h-100 object-fit-cover" alt="Line">
+              <div class="overlay position-absolute bottom-0 p-4 w-100">
+                <span class="text-bev-gold small fw-bold text-uppercase tracking-widest" style="font-size: 10px;">Production</span>
+                <h3 class="h5 fw-serif text-white mt-1">BX-100 Bottling</h3>
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="col-lg-3 col-sm-6 catalog-item" data-category="processing">
+            <div class="catalog-card position-relative overflow-hidden rounded-5 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format" class="w-100 h-100 object-fit-cover" alt="Spark">
+              <div class="overlay position-absolute bottom-0 p-4 w-100">
+                <span class="text-bev-gold small fw-bold text-uppercase tracking-widest" style="font-size: 10px;">Processing</span>
+                <h3 class="h5 fw-serif text-white mt-1">C-Spark Carbonator</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-10 bg-bev-paper">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <span class="text-bev-gold fw-bold text-uppercase tracking-widest small">Support</span>
+            <h2 class="display-5 fw-serif text-bev-navy mt-3 mb-5">Let's Connect</h2>
+            <div class="accordion accordion-flush" id="faqAccordion">
+              <div class="accordion-item bg-transparent">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent shadow-none fw-serif h5" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                    What is the typical lead time?
+                  </button>
+                </h2>
+                <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted small lh-lg">Typically 12-16 weeks including initial site assessment and logic programming.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-white p-5 rounded-5 shadow-sm">
+              <form id="contactForm">
+                <div class="mb-4">
+                  <label class="small text-uppercase fw-bold tracking-widest text-muted mb-2">Email Address</label>
+                  <input type="email" class="form-control bg-light border-0 rounded-4 p-3 shadow-none" placeholder="contact@company.com" required>
+                </div>
+                <div class="mb-4">
+                  <label class="small text-uppercase fw-bold tracking-widest text-muted mb-2">Technical Inquiry</label>
+                  <textarea class="form-control bg-light border-0 rounded-4 p-3 shadow-none" rows="4" placeholder="Your production goals..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-luxury bg-bev-navy text-white w-100 py-3">Send Inquiry</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bev-navy text-white py-5">
+      <div class="container py-5">
+        <div class="row g-5 border-bottom border-white border-opacity-10 pb-5 mb-5">
+          <div class="col-lg-4">
+            <div class="logo-footer mb-4 h4 fw-serif">BEVCO</div>
+            <p class="text-white-50 small" style="max-width:300px">Pioneering the future of liquid engineering since 1984.</p>
+          </div>
+          <div class="col-lg-8 row g-4">
+            <div class="col-6 col-md-4">
+              <h5 class="small text-bev-gold text-uppercase tracking-widest fw-bold mb-4">Solutions</h5>
+              <ul class="list-unstyled small text-white-50 lh-lg">
+                <li>Production</li>
+                <li>Processing</li>
+                <li>Filtration</li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <h5 class="small text-bev-gold text-uppercase tracking-widest fw-bold mb-4">Company</h5>
+              <ul class="list-unstyled small text-white-50 lh-lg">
+                <li>About</li>
+                <li>Careers</li>
+                <li>Legal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-white-25 small text-uppercase tracking-widest fw-bold" style="font-size: 10px;">
+          © 2026 Bevco Engineering Gmbh. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
 
